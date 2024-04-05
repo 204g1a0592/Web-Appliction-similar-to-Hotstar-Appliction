@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include Bootstrap JS (Optional, but needed for some features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style font: 45 sans-serif;>
+            td{
+                width: 20vw;
+                height: 10vw;
+                
+            }
+            
+            #tab{
+                width: 10vw;
+                height: 10vw;
+                ;
+            }
+            .selected {
+            background-color: #e1e9c6;
+            color:rgb(255, 255, 255);
+        }
+            #div1{
+            border-right: 1px solid #ccc; /* Single line separating cells horizontally */
+            border-bottom: 1px solid #ccc; /* Single line separating cells vertically */
+            padding: 10px;
+             /* Adjust padding as needed */
+            
+        }
+        .lan{
+            font-size: 3vw;
+        }
+        .heart{
+            size: 10ch;
+            color: #e9e0e0;
+        }
+        .color{
+            background-color:rgb(3, 23, 81);
+            color: #efe8e8;;
+        }
+        .cell {
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Add transition for smooth color change */
+        }
+
+        .cell:hover {
+            background-color: rgb(156, 141, 156); /* Change background color when hovered */
+        }
+
+        .cell.clicked .heart {
+            color: red; /* Fill color of the heart when clicked */
+        }
+        .h1{
+            color: #faf0f0;
+        }
+        .b{
+            position: relative;
+            width: 1vw;
+        }
+        </style>
+    </head>
+    <body class="color">
+        
+        <center>
+            <h1 class="h1">
+                Choose the Language</h1>
+            </h1><table >
+            <tr >
+                    <td id="div1" class="cell" onmouseover="highlightCell(this)" onmouseout="unhighlightCell(this)" onclick="toggleSelection(this)"><h3 class="heart" align="left">&#10084;</h3>
+                    <center class="lan">English</center>
+                    <h3 align="right"><img id="tab" align="right" src="english.jpg"></h3></td>
+                    <td id="div1" onclick="toggleSelection(this)" ><h3 class="heart" align="left">&#10084;</h3>
+                        <center class="lan">Telugu</center>
+                        <h3 align="right"><img id="tab" align="right" src="telugu.webp"></h3></td>
+            </tr>
+            <tr >
+                <td id="div1" onclick="toggleSelection(this)" ><h3 class="heart" align="left">&#10084;</h3>
+                    <center class="lan">Hindi</center>
+                    <h3 align="right"><img id="tab" align="right" src="hindi.webp"></h3></td>
+                    <td id="div1" onclick="toggleSelection(this)"><h3 class="heart" align="left">&#10084;</h3>
+                        <center class="lan">Pinjabi</center>
+                        <h3 align="right"><img id="tab" align="right" src="punjab.jpg"></h3></td>
+        </tr>
+        <tr >
+            <td id="div1" ><h3 class="heart" align="left">&#10084;</h3>
+                <center class="lan">Marathi</center>
+                <h3 align="right"><img id="tab" align="right" src="tamil.webp"></h3></td>
+                <td id="div1" onclick="toggleSelection(this)"><h3 class="heart" align="left">&#10084;</h3>
+                    <center class="lan">Gujarath</center>
+                    <h3 align="right"><img id="tab" align="right" src="Gujarthi.jpg"></h3></td>
+    </tr>
+    <tr >
+        <td id="div1" onclick="toggleSelection(this)"><h3 class="heart" align="left">&#10084;</h3>
+            <center class="lan">Korean</center>
+            <h3 align="right"><img id="tab" align="right" src="Koeran.webp"></h3></td>
+            <td id="div1" onclick="toggleSelection(this)"><h3 class="heart" align="left">&#10084;</h3>
+                <center class="lan">Chineese</center>
+                <h3 align="right"><img id="tab" align="right" src="chineese.webp"></h3></td>
+</tr>
+<tr >
+    <td id="div1" onclick="toggleSelection(this)"><h3 class="heart" align="left">&#10084;</h3>
+        <center class="lan">Thai</center>
+        <h3 align="right"><img id="tab" align="right" src="Thai.jpg"></h3></td>
+        <td id="div1" onclick="toggleSelection(this)" ><h3 class="heart" align="left">&#10084;</h3>
+            <center class="lan">English</center>
+            <h3 align="right"><img id="tab" align="right" src="tamil.webp"></h3></td>
+</tr>
+<tr><form action="Chocice.html">
+    <td class="b" class="continue" ><a href="Chocice.html"><button type="button" class="btn btn-info" >Continue and Go for Next</button></a></td>
+    </form>
+</tr>
+        </center></table>
+    </body>
+    
+       
+    <script>
+        function highlightCell(cell) {
+            // Add the 'hovered' class when the mouse is over the cell
+            cell.classList.add('hovered');
+        }
+
+        function unhighlightCell(cell) {
+            // Remove the 'hovered' class when the mouse leaves the cell
+            cell.classList.remove('hovered');
+        }
+
+        function toggleSelection(cell) {
+            // Toggle the 'selected' class on the cell
+            cell.classList.toggle('clicked');
+        }
+    </script>
+    </body>
+</html>

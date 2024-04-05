@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar Clone - Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #fff;
+    background-image: url("path/to/your/image.jpg"); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo img {
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    background-color: rgba(28, 28, 28, 0.9); /* Adjust the alpha value for transparency */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff8f00;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+label {
+    margin-bottom: 8px;
+    display: block;
+    color: #9b9b9b;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff8f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a {
+    color: #ff8f00;
+    text-decoration: none;
+}
+
+p {
+    color: #9b9b9b;
+    margin-top: 10px;
+}
+
+</style>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <!-- Hotstar-like logo or your custom logo -->
+        <img src="{{ url_for('static', filename='hotstar_logo.png') }}" alt="Hotstar Logo">
+    </div>
+    <div class="signup-form">
+        <h1>Create a Hotstar Account</h1>
+        <form action="/signup" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="/login">Log in here</a></p>
+    </div>
+</div>
+
+</body>
+</html>

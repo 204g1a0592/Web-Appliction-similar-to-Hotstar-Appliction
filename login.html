@@ -1,0 +1,162 @@
+<!--
+<html>
+    <head>
+        <style>
+            .custom{
+                position: fixed;
+                top: 20%;
+                left: 30%;
+                font-size: 2vw;
+                color: #f7e5e5;
+            }
+            .info-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info-box1 {
+            border: 1px solid rgb(245, 206, 206)bdb;
+            padding: 10px;
+            width: 650px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+            
+            body{
+                background-color: rgb(30, 30, 101);
+            }
+            .tel-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .tel-input {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="custom"><h1>Log in or sign up to continue</h1>
+        <table>
+            <tr>
+           <td> <div class="info-box">
+            <p>+91</p></td>
+            <td><div class="info-box1"><input type="tel" id="mobileNumber" name="mobileNumber" class="tel-input" placeholder="Enter your mobile number">
+        </td>
+    </tr>
+    </table>
+
+
+<h6>We'll sen you an OTP by SMS to confirm yout mobile numeber</h6>
+<h6 align="center">Having trouble loggin in? <a href="">Get Help</a></h6>
+</div>
+    </body>
+</html>
+-->
+<html>
+    <head>
+        <style>
+                body {
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #141414;
+                    color: #fff;
+                }
+
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                }
+
+                .logo img {
+                    width: 150px; /* Adjust size as needed */
+                    margin-bottom: 20px;
+                }
+
+                .login-form {
+                    background-color:cornflowerblue;
+                    padding: 20px;
+                    border-radius: 8px;
+                    text-align: center;
+                    box-shadow: 10px 10px 10px rgb(25, 55, 255)
+                }
+
+                h1 {
+                    color: #ff8f00;
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                label {
+                    margin-bottom: 8px;
+                }
+
+                input {
+                    padding: 10px;
+                    margin-bottom: 16px;
+                    border: 1px solid #4a4a4a;
+                    border-radius: 4px;
+                    background-color: #2a2a2a;
+                    color: #fff;
+                }
+
+                button {
+                    padding: 10px;
+                    background-color: #ff8f00;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                a {
+                    color: #ff8f00;
+                    text-decoration: none;
+                }
+
+                p {
+                    color: #6f1919;
+                    margin-top: 10px;
+                }
+
+            </style>
+            </head>
+            <body style="background-image: url(bg.webp); background-size: cover;">
+                
+
+<div class="container" >
+    <div class="logo">
+        <!-- Hotstar-like logo or your custom logo -->
+        <img src="bg.webp" alt="Hotstar Logo">
+    </div>
+    <div class="login-form">
+        <h1>Login to Hotstar</h1>
+        <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit"><a href="StramingPage.html">Login</button></a>
+        </form>
+        <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+    </div>
+</div>
+
+</body>
+</html>
+
+            </body>

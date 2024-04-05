@@ -1,0 +1,34 @@
+<html>
+    <head>
+<style>
+    video{
+        width: 100vw;
+        height: 100vh;    
+        object-fit:cover;
+    }
+        </style>
+    </head>
+    <body background="hotstarlogo.mp4"></body>
+    <div >
+        <video id="logoVideo"
+          autoplay=""
+          muted=""
+          >
+          <source
+            src="hotstarlogo.mp4"
+            type="video/mp4"
+            
+          />
+        </video>
+      </div>
+      <script>
+        // Get the video element
+        var logoVideo = document.getElementById('logoVideo');
+
+        // Listen for the 'ended' event on the video
+        logoVideo.addEventListener('ended', function () {
+            // After the video ends, redirect to the start page
+            window.location.href = 'Language.html'; // Replace 'start-page.html' with your actual start page URL
+        });
+    </script>
+</html>

@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include Bootstrap JS (Optional, but needed for some features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style font: 45 sans-serif;>
+            td{
+                width: 20vw;
+                height: 10vw;
+                
+            }
+            
+            #tab{
+                width: 100w;
+                height: 30vw;
+                
+            }
+            .selected {
+            background-color: #e1e9c6;
+            color:rgb(255, 255, 255);
+        }
+            #div1{
+            border-right: 1px solid #ccc; /* Single line separating cells horizontally */
+            border-bottom: 1px solid #ccc; /* Single line separating cells vertically */
+            padding: 10px;
+             /* Adjust padding as needed */
+            
+        }
+        .lan{
+            font-size: 3vw;
+        }
+        .heart{
+            size: 10ch;
+            color: #e9e0e0;
+        }
+        .color{
+            background-color:rgb(3, 23, 81);
+            color: #efe8e8;;
+        }
+        .cell {
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Add transition for smooth color change */
+        }
+
+        .cell:hover {
+            background-color: rgb(156, 141, 156); /* Change background color when hovered */
+        }
+
+        .cell.clicked .heart {
+            color: red; /* Fill color of the heart when clicked */
+        }
+        .h1{
+            color: #faf0f0;
+        }
+        button{
+            size:10ch;
+            align-items: center;
+        }
+        .b{
+            position: relative;
+            width: 1vw;
+        }
+        img{
+            height: 20vw;
+            width: 20vw;
+        }
+        td {
+        padding: 10px; /* Adjust the padding value to control the space between the cell content and its borders */
+    }
+    img{
+        border-radius: 10px
+    }
+    .btn-outline-success {
+            size: 10ch;
+            align-items: center;
+        }
+
+        .selected-heart {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            color: red;
+            font-size: 24px;
+        }
+
+        .cell {
+            position: relative;
+            cursor: pointer;
+            transition: background-color 1s ease;
+        }
+
+        .cell:hover {
+            background-color: rgb(255, 64, 87);
+            border-radius: 10px
+        }
+
+        .cell.clicked .selected-heart {
+            display: block;
+        }
+
+        .selected-heart {
+            display: none;
+        }
+        </style>
+    </head>
+    <body class="color">
+        
+        <center>
+            <h1 class="h1">
+                Select atleat two contents you Like</h1>
+            </h1><table >
+            <tr>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c11.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c1.jpg">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c2.jpg">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c3.jpg">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c7.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c5.jpg">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c6.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c11.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c8.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c9.jpg">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c10.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+                <td class="cell" onclick="toggleSelection(this)">
+                    <img src="c7.webp">
+                    <div class="selected-heart">&hearts;</div>
+                </td>
+            </tr>
+            <tr>
+              <form action="Premierm.html">
+                <td colspan="20"> <button class="btn-outline-success">Start Watching</button></td>
+            </tr>
+            <script>
+                function toggleSelection(cell) {
+                    cell.classList.toggle('clicked');
+                }
+        
+                function startWatching() {
+                    // Add your logic to start watching selected content
+                    var selectedImages = document.querySelectorAll('.cell.clicked img');
+                    if (selectedImages.length < 2) {
+                        alert('Please select at least two contents.');
+                    } else {
+                        // Perform the action to start watching
+                        alert('Starting to watch selected contents.');
+                        // You can redirect or perform any other action here
+                    }
+                }
+            </script>
+            </table>
+            </center>
+            </body>
+            </html>
+            
+        
